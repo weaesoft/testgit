@@ -1,0 +1,105 @@
+Start QT Compiler (Ticket1.5)
+
+1.i want understand framework QT
+2.i want create project witch Framework QT
+3.i want create project on Orange pi Witch Frameworl QT
+
+
+REAL
+
+unstall
+
+STEP1 : cd ~/Qt/MaintenanceTool.app
+
+install 
+
+STEP1	: Dowload --> Next --> Focus QT Chack box 5.14.2
+
+STEP2	: 16.32 pm. ............wait............ 17.
+
+
+
+/*-----------------------------------------------------------------------*/
+
+
+MODEL
+
+START TOPIC : What is QML
+
+- QML feature
+
+- QML basic
+
+- QML state and transition
+
+- QML and shaders effect
+
+
+START READ : QML (QT Meta-Object Language)
+
+From	: https://python3.wannaphong.com/2014/08/gui-pyside-8-ui-qml.html
+
+STEP1	: install QT V. 5.14.2 +
+
+STEP2	: New Project --> input Name and Path
+
+STEP3	: input Code into Page --> Save name.qml
+
+CODE----------------------------------------------------------------------
+
+import QtQuick 1.1
+Rectangle {
+    width: 200
+    height: 200
+    color: "red"
+ 
+    Text {
+        text: "Hello World"
+        anchors.centerIn: parent
+    }
+}
+
+CODE**********************************************************************
+
+STEP4	: nano namefile.py
+
+code----------------------------------------------------------------------
+
+import sys
+from PySide.QtCore import *
+from PySide.QtGui import *
+from PySide.QtDeclarative import QDeclarativeView
+     
+# สร้างโปรแกรม  Qt แล้วใช้  QDeclarative แสดง
+app = QApplication(sys.argv)
+view = QDeclarativeView()
+
+# โยงไฟล์ QML เข้ามาใช้งาน
+url = QUrl('view.qml')
+
+# กำหนดค่า view แล้วแสดง
+view.setSource(url)
+view.show()
+
+sys.exit(app.exec_())
+
+CODE**********************************************************************
+
+END READ
+
+
+START TOPIC : What is QT C++
+
+- Qt C++
+
+- Qt signal and slot concept
+
+- Data type collection and file
+
+- widgets and layouts
+
+- Qwt Example
+
+- Hardware interface with Qt on Raspberry PI
+
+- Beaglebone Qt structure and how to programming
